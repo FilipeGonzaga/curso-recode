@@ -1,0 +1,11 @@
+h1 {
+    color: darkblue;
+}
+
+b, p {
+    color: cadetblue;
+}
+
+h1, b, p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

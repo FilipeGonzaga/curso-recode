@@ -1,0 +1,82 @@
+body {
+    background-image: url(fundo1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.textoApresentacao {
+    color: aliceblue;
+}
+
+#logotipo {
+    float: left;
+    width: 13%;
+}
+
+#logo {
+    width: 16%;
+    margin-left: -200px;;
+    margin-top: 64px;
+}
+
+#fundotexto {
+    opacity: 0,1;
+    margin-left: 30px;
+    width: 75%;
+}
+
+
+h1  {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 2rem;
+        margin: 4rem;
+    }
+.titulo {
+    margin-top: -20%;
+    text-align: center;
+    /*Backgound Gradiente*/
+    background: -webkit-linear-gradient(left, rgba(235, 239, 240, 0) 0%, #54ff8d 100%);
+    background: linear-gradient(to right, #dae2dd 0%, #175335 100%);
+
+-webkit-background-clip: text;
+-webkit-text-fill-color:transparent;
+}
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    margin: 2rem;
+    margin-right: 2rem;
+    margin-top: -260px;
+    margin-left: 130px;
+}
+
+.textoApresentacao {
+        /*Backgound Gradiente
+        background: -webkit-linear-gradient(left, rgb(50, 21, 211) 0%, #54ff8d 100%);
+        background: linear-gradient(to right, #341adb 0%, #428162 100%);*/
+
+        -webkit-text-fill-color: cornsilk;
+    
+       /* -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        */
+
+}
+
+
+#textsobre {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2rem;
+    margin: 2rem;
+    margin-right: 2rem;
+    margin-top: -396px;
+    margin-left: 94px;  
+
+}
+
+.rodape {
+    margin-top: 5%;
+    color: cornsilk;
+}

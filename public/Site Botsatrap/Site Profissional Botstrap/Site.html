@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.css'>
+    <script src='main.js'></script>
+
+    <style>
+    body {
+        background-image: url("fundo.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .headerTitulo {
+        background-image: url("fundotitulo.jpg");
+        
+    }
+
+    .fundoprof {
+        background-image: url("fundoavatar.jpg");
+    }
+
+    .textavatar {
+        color: white;
+    }
+
+
+
+   
+    
+    </style>
+
+</head>
+
+<body>
+    <!--Inicio da Navbar-->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!--Logo tipo-->
+        <a href="#" class="navbar-brand">
+            <img src="logo.jpg" style="width: 30px; height: auto;" class="d-inline-block align-top" >Recode
+            Pro- SP
+        </a>
+        <!--Botão menor que 768px-->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--Inicio dos Itens do menu que serão ocultos-->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="Site.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Curso.html">Curso</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contato.html">Contato</a>
+                </li>
+                <!--Inicio Dropdown-->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Tecnologias
+                    </a>
+                    <!--Itens Dropdown-->
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">HTML 5</a>
+                    <a class="dropdown-item" href="#">Css</a>
+                    <a class="dropdown-item" href="#">Javascript</a>
+                </div>
+                </li>
+                <!--Fim do Container-->
+            </ul>
+        </div>
+    </nav>
+    <!--Fim da Navbar-->
+
+    <!--Inicio Dropdown-->
+    <div class="container">
+        <!-- Inicio do Jumbotron -->
+        <div class="jumbotron headerTitulo">
+            <h1 class="textavatar">Recode Pro - São Paulo</h1>
+            <p class="textavatar">O maior treinamento Full Satck do Brasil</p>
+            <p class="textavatar">Professor: Flávio Mota</p>
+        </div>
+        <!-- Fim Jumbotron -->
+
+        <!-- Inicio das linha dos Cards -->
+        <div class="row justify-content-md-around">
+            <!-- Inicio do Card 01 -->
+            <div class="card" style="width:300px">
+                <img class="card-img-top" src="avatar.jfif" alt="Card image" style="width: 100%; height:auto;">
+                <div class="card-body fundoprof">
+
+                    <h4 class="card-title textavatar">Flavio Mota</h4>
+                    <p class="card-text textavatar">Analista de Sistemas, responsavel pelos projetos e engenharia de software
+                        Recode - SP
+                    </p>
+                    <a href="#" class="btn btn-primary">Saiba mais</a>
+
+                </div>
+            </div>
+
+            <!-- Inicio do Card 02 -->
+            <div class="card" style="width:300px">
+                <img class="card-img-top" src="avatar1.jpg" alt="Card image" style="width: 100%; height:auto;">
+                <div class="card-body fundoprof">
+
+                    <h4 class="card-title textavatar">Jão da Silva</h4>
+                    <p class="card-text textavatar">
+                        Programador Front-end, responsavel por criar as telas dos sistema e experciencia do usuário.
+                    </p>
+                    <a href="#" class="btn btn-primary">Saiba mais</a>
+
+                </div>
+            </div>
+
+            <!-- Inicio do Card 03 -->
+            <div class="card" style="width:300px">
+                <img class="card-img-top" src="avatar2.jpg" alt="Card image" style="width: 100%; height:auto;">
+                <div class="card-body fundoprof">
+
+                    <h4 class="card-title textavatar">Mario Gomes</h4>
+                    <p class="card-text textavatar">
+                        Programador Back-end, responsavel pelas regras de negocio e banco de dados.
+                    </p>
+                    <a href="#" class="btn btn-primary">Saiba mais</a>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <!--Scripts JS-->
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

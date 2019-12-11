@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clinica Love</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+
+
+<body style="background-image: url(assets/img/fundo.png); background-size: 100% 100%; background-repeat: no-repeat; background-attachment: fixed;">
+    <div class="barra_inicial">
+        <nav class="navbar navbar-expand-sm bg-light  bg-dark text-center justify-content-center">
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        Cadastro
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#cadastroP">Paciente</a>
+                        <a class="dropdown-item" href="#cadastroM">Médico</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <img src="assets/img/logo.png">
+                </li>
+                <li class="nav-item">
+                    <h2>Safe Health</h2>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#consulta">Consulta</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row cadastro justify-content-around text-center">
+            <div class="col-md-12 col1" id="cadastroP"
+                style="background-image: url(assets/img/paciente.jpeg); background-size: 100% 100%; border-radius: 25px; height: 400px; background-attachment: fixed;">
+                <button type="button" class="btn btn-success botao" data-toggle="modal" data-target="#myModal1">
+                    Cadastre-Se
+                </button>
+
+                <!-- The Modal -->
+                <div class="modal" id="myModal1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+
+                                <h4 class="modal-title">Cadastre-Se</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Nome</label>
+                                        <input type="text" class="form-control" id="nomeCliente">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>CPF</label>
+                                        <input type="text" class="form-control" id="cpf">
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-success" onclick="guardarCliente()">Enviar</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 col1" id="cadastroM" 
+                style="background-image: url(assets/img/consulta.jpg); background-size: 100% 100%; border-radius: 25px; height: 400px; background-attachment: fixed;">
+                <button type="button" class="btn btn-success botao" data-toggle="modal" data-target="#myModal2">
+                    Cadastro Médico
+                </button>
+
+                <!-- The Modal -->
+                <div class="modal" id="myModal2">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Cadastrar</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label>Nome</label>
+                                        <input type="text" class="form-control" id="nomeMedico">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>CRM</label>
+                                        <input type="text" class="form-control" id="crm">
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-success"
+                                    onclick="guardarMedico()">Enviar</button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 col1" id="consulta"
+                style="background-image: url(assets/img/banner.jpg); background-size: 100% 100%; border-radius: 25px; height: 400px; background-attachment: fixed;">
+                <button type="button" class="btn btn-success botao" data-toggle="modal" onclick="agendar()" data-target="#myModal3">
+                    Agende sua Consulta
+                </button>
+
+                <!-- The Modal -->
+                <div class="modal" id="myModal3">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Agendamento</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                    Clientes <br>
+                                    <select id="selecaoCliente">
+                                        <!-- <option value="cliente1">cliente1</option>                                     
+                                        <option value="cliente2">cliente2</option>                                     
+                                        <option value="cliente3">cliente3</option>     -->                           
+                                    </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                    Médicos <br>
+                                    <select id="selecaoMedico">
+                               <!--          <option value="medico1">medico1</option>                                     
+                                        <option value="medico2">medico2</option>                                     
+                                        <option value="medico3">medico3</option>    -->                                  
+                                    </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                    Data <br>
+                                    <select id="selecaoData">
+                                    </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                    <button type="submit" class="btn btn-success" onclick="agendarConsulta()">Agendar</button>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-5">
+                                    <table class="table table-striped table-bordered table-sm">
+                                        <thead>
+                                            <tr>
+                                                <td>Medico</td>
+                                                <td>Paciente</td>
+                                                <td>Dia</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="ylistadsdsds">
+                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rodape" id="cont">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 menu">
+                    <h3>Menu</h3>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                                Cadastro
+                            </a>
+                                <a class="dropdown-item" href="#cadastroP">Paciente</a>
+                                <a class="dropdown-item" href="#cadastroM">Medico</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#consulta">Consulta</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-6 contatos">
+                    <h3>Contato</h3>
+                    <h5>TEL: (11) 1234-5678</h5>
+                    <h5>CEL: (11) 91234-5678</h5>
+                    <h5>E-mail: clinica@clinica.com.br</h5>
+                    <h5>E-mail: clinica@clinica.com.br</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/clinica.js"></script>
+</body>
+
+</html>
