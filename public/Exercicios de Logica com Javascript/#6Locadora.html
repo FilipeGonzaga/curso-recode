@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Locadora</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+    
+    //ENTRADA
+    var qtddfitas;
+    var valoralug;
+    var fatmultames;
+    var fitasestrag;
+    var qtddfinalfitas;
+    var ganhosanual;
+    var faturaAnual;
+
+    qtddfitas = Number(prompt("Digite a quantidade de Fitas da locadora: "));
+    valoralug = Number(prompt("Digite o valor do aluguel das Fitas"));
+
+    //PROCESSO
+
+    //calculo de faturamento
+        faturaAnual = (qtddfitas * valoralug/3)*12;
+
+    //Multa 10% por atraso
+        fatmultames = (qtddfitas*valoralug/3)/10;
+        fatmultames = fatmultames*10/100;
+
+        //2% se atragam 1/10 é comprado pra reposição 
+        fitasestrag =qtddfitas-qtddfitas*2/100;
+        qtddfinalfitas= fitasestrag+fitasestrag/10;
+
+        //Ganho anual
+        ganhosanual = faturaAnual+ fatmultames*12 -(fitasestrag*valoralug);
+
+
+        //SAÍDA
+
+
+        document.write("Faturamento anual:  "+faturaAnual+"<br>");
+        document.write("Faturamento por multa por mes:  "+fatmultames.toFixed(2)+"<br>");
+        document.write("Quantidade final de fitas:  "+qtddfinalfitas+"<br>");
+        document.write("Ganho anual Total:  "+ganhosanual+"<br>");
+
+
+  
+        </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+
+    <div class="container">
+            <div class="jumbotron col-md-12 col-sm-12">
+                <h1>Calendario</h1>
+            </div>
+            <div class="container">
+            <form>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <h4>Escolha um número e te digo o mês</h4>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <select class="form-control" id="mes">
+                            <option selected>-- Selecione um número --</option>
+                            <option value="0">1</option>
+                            <option value="1">2</option>
+                            <option value="2">3</option>
+                            <option value="3">4</option>
+                            <option value="4">5</option>
+                            <option value="5">6</option>
+                            <option value="6">7</option>
+                            <option value="7">8</option>
+                            <option value="8">9</option>
+                            <option value="9">10</option>
+                            <option value="10">11</option>
+                            <option value="11">12</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label> </label>
+                    <button type="button" onclick="calendario()" class="btn btn-success form-control">Mostrar mês</button>
+                </div>
+
+   
+        <script>
+            function calendario() {
+
+                let data = new Date();
+
+                let calendar = document.getElementById("mes").value;
+
+                data.setMonth(calendar);
+                
+                switch(data.getMonth()) {
+                    case 0:
+                        alert('Janeiro');
+                        break;
+                    case 1:
+                        alert('Fevereiro');
+                        break;
+                    case 2:
+                        alert('Março');
+                        break;
+                    case 3:
+                        alert('Abril');
+                        break;
+                    case 4:
+                        alert('Maio');
+                        break;
+                    case 5:
+                        alert('Junho');
+                        break;
+                    case 6:
+                        alert('Julho');
+                        break;
+                    case 7:
+                        alert('Agosto');
+                        break;
+                    case 8:
+                        alert('Setembro');
+                        break;
+                    case 9:
+                        alert('Outubro');
+                        break;
+                    case 10:
+                        alert('Novembro');
+                        break;
+                    case 11:
+                        alert('Dezembro');
+                        break;
+                }
+
+            }
+        </script>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

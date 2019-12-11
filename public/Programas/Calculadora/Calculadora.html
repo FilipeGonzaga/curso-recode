@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.css'>
+
+</head>
+
+<style>
+
+
+</style>
+
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron">
+        <div class="row">
+            <div class="col-12 ">
+                <h1>Calculadora</h1>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container">
+        <div class="form-row">
+            <div class="form-group col-md-4">
+
+                <input type="text" class="form-control" placeholder="Digite o numero" id="n1">
+            </div>
+
+
+            <div class="form-group col-md-4">
+                <select name="operacao" id="op" class="form-control">
+                    <option value="soma">Soma</option>
+                    <option value="subtração">Subtração</option>
+                    <option value="multiplicação">Multiplicação</option>
+                    <option value="divisão">Divisão</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+
+                <input type="text" class="form-control" placeholder="Digite o numero" id="n2">
+            </div>
+            <div class="form-group col-md-4">
+                <button type="button" class="btn btn-primary" onclick="resultado()">Resultado</button>
+                
+            </div>
+    
+            <input type="text" class="form-control" placeholder="Resultado" id="resultado">
+          
+        </div>
+
+        
+
+    </div>
+
+    <script src='js/calculadora.js'></script>
+    <script src='js/bootstrap.min.js'></script>
+    <script src='js/jquery-3.4.1.min.js'></script>
+    <script src='js/popper.min.js'></script>
+</body>
+
+</html>

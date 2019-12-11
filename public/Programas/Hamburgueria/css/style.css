@@ -1,0 +1,22 @@
+img{
+	width: 100%;
+	height: 300px;
+	border-radius: 25px;
+}
+.jumbotron{
+	background: transparent !important;
+}
+.cardapio{
+	color: yellow;
+	margin-bottom: 30px;
+	padding: 30px;
+}
+.cardapio h4{
+	margin-top: 30px;
+}
+label{
+	color: #ffffff;
+}
+.resul{
+	margin-bottom: 30px;
+}

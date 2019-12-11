@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Salário e desconto INSS</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>        
+    //ENTRADA
+    var salarioHr;
+    var salarioLiq;
+    var diasT;
+    var descINSS;
+    var Bruto;
+
+    salarioHr = Number(prompt("Digite o valor recebido por hora do Professor: "))
+    diasT = Number(prompt("Digite a quantidade de dias trabalhados nos mês"))
+
+    //PROCESSO
+    Bruto = salarioHr * diasT
+    
+    if (Bruto < 1752){
+        salarioLiq = Bruto += Bruto*8/100
+
+        document.write("O salário Líquido do Prof°(a) foi: "+salarioLiq+",00 reais")
+
+    }else if (Bruto > 1752 && Bruto < 2720){
+        salarioLiq = Bruto += Bruto*9/100
+
+        document.write("O salário Líquido do Prof°(a) foi: "+salarioLiq+",00 reais")
+    }else{
+        salarioLiq = Bruto += Bruto*11/100
+
+        document.write("O salário Líquido do Prof°(a) foi: "+salarioLiq+",00 reais")
+    }
+
+   
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    </script>
+    
+</body>
+</html>

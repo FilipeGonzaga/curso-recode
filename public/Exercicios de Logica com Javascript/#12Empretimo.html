@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Emprestimo </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>   
+    //ENTRADA
+
+    var Salariobrut;
+    var parc;
+    var bruto;
+    var valorpres;
+    var valormaxparc;
+    var qtdddeparc;
+   
+        Salariobrut = Number(prompt("Digite o Salário bruto: "));
+        parc = Number(prompt("Digite o valor da prestação: "));
+    
+    //PROCESO
+
+        
+
+
+        function Emprestimo(bruto,valorpres){
+            valormaxparc = bruto*30/100
+            
+            if(parc < valormaxparc){
+                return document.write(`Valor de Emprestimo poderá ser concedido `);
+            }else{
+                return document.write(`Valor de Emprestimo não poderá ser concedido`);
+            }
+                      
+        } 
+
+        Emprestimo(Salariobrut,parc);
+
+        
+
+
+    //SAÍDA
+        
+        
+        
+        </script>
+
+</body>
+</html>

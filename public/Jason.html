@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <style>
+        .btn {
+            margin: 20px 0;
+        }
+
+        .borda {
+            border: 1px solid black
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+        var dados = {
+            "funcionarios": [
+
+                {
+                    "nome": "João da Silva",
+                    "skills": ["Java", "PHP", "Javascript", "React"]
+                },
+
+                {
+                    "nome": "Renata Souza",
+                    "skills": ["Python", "Angular"]
+                },
+
+                {
+                    "nome": "Rodrigo Campos",
+                    "skills": ["Scrum", "Project", "Office", "Gestão de Equipe"]
+                },
+
+                {
+                    "nome": "Tarcisio Moura",
+                    "skills": ["Shell Script", "Linux", "Apache", "Segurança"]
+                },
+
+                {
+                    "nome": "Joselito Marmita",
+                    "skills": ["Manutenção de PC", "Cabeamento", "Configuração"]
+                },
+
+                {
+                    "nome": "Fernando Pessoa",
+                    "skills": ["Mídias Sociais", "Marketing", "Design"]
+                }
+            ]
+        }
+
+        document.write("<table border=1 cellspacing=0 cellpadding=3>");
+        document.write("<tr>");
+        document.write("<th> Nome </th>");
+        document.write("<th> Skills </th>");
+        document.write("</tr>");
+
+        for (i = 0; i < dados.funcionarios.length; i++) {
+            document.write("<tr>");
+            document.write("<td rowspan=" + dados.funcionarios[i].skills.length + ">");
+            document.write(dados.funcionarios[i].nome);
+            document.write("</td>");
+            document.write("</tr>");
+            
+            for (k = 0; k < dados.funcionarios[i].skills.length; k++) {
+            if (k > 0) {
+                document.write("<tr>");
+
+                document.write("<td>");
+
+                document.write(dados.funcionarios[i].skills[k]);
+                document.write("</td>");
+
+                document.write("</tr>");
+            }
+        }
+        }
+
+        
+        document.write("</table>");
+
+
+
+
+    </script>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/main9.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>

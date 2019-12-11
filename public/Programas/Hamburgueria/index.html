@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hamburgueria Raiz</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body style="background-image: url(./assets/img/funduo.jpg); background-size: 100% 100%;">
+	
+ 
+	<div class="container-fluid">
+       <div class="jumbotron">
+           <div class="row">
+               <div class="col-md-12">
+               	<img src="assets/img/hamburgueria2.png" alt="">
+               </div>
+           </div>
+       </div>
+   </div>
+   
+   <div class="container-fluid">
+       <div class="row  cardapio justify-content-around text-center">
+           <div class="col-md-4">
+               <h4>Pão com Harmbúrguer 8,00</h4>
+               <img src="https://i.pinimg.com/736x/fb/6d/b4/fb6db4c25b9b82599ad1d49581059251.jpg">
+           </div>
+           <div class="col-md-4">
+               <h4>Batata Frita  7,00</h4>
+               <img src="https://img.cybercook.com.br/receitas/388/batata-frita-na-air-fryer-623x350.jpeg">
+           </div>
+           <div class="col-md-4">
+               <h4>Refrigerante 7,00</h4>
+               <img src="https://cdn.consumidormoderno.com.br/wp-content/uploads/2019/01/refrigerante-imposto.jpg" >
+           </div>
+           <div class="col-md-4">
+               <h4>Salada 8,00</h4>
+               <img src="https://www.receitax.com/wp-content/uploads/2016/01/08-848x477.png" >
+           </div>
+           <div class="col-md-4">
+               <h4>Suco 7,00</h4>
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8KPmrB3ckeMKGH4t6jspMduUixfGO1SpIP17BK7_HdqRJVP0D&s" >
+           </div>
+       </div>
+   </div>
+
+   <form>
+        <div class="container">
+            <div class="form-row justify-content-around">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control"  placeholder="Qual a Quantidade ?" id="quantidade1">
+                    <input type="text" class="form-control"  placeholder="Qual a Quantidade ?" id="quantidade2">
+                    <input type="text" class="form-control"  placeholder="Qual a Quantidade ?" id="quantidade3">
+                    <input type="text" class="form-control"  placeholder="Qual a Quantidade ?" id="quantidade4">
+                    <input type="text" class="form-control"  placeholder="Qual a Quantidade ?" id="quantidade5">
+                </div>
+                <div class="form-group col-md-6">
+                    <select name="cars"  id="calcular1" class="form-control">
+                        <option value="1">Pão com Harmbúrguer 8,00</option>
+                        <option value="2">Batata Frita  7,00</option>
+                        <option value="3">Refrigerante 7,00</option>
+                        <option value="4">Salada 8,00</option>
+                        <option value="5">Suco 7,00</option>
+                        <option value="6">Finalizar Pedido</option>
+                    </select>
+                </div>
+                <buttopn class="btn btn-primary" onclick="Continuar()">Continuar</button>
+            </div>
+
+            <div class="row resul justify-content-around">
+                <div class="col-md-3">
+                    <label>Pão com Harmbúrguer</label>
+                    <input type="text" class="form-control"  id="resultado1">
+                </div>
+                <div class="col-md-2">
+                    <label>Batata Frita</label>
+                    <input type="text" class="form-control"  id="resultado2">
+                </div>
+                <div class="col-md-2">
+                    <label>Refrigerante</label>
+                    <input type="text" class="form-control"  id="resultado3">
+                </div>
+                <div class="col-md-2">
+                    <label>Salada</label>
+                    <input type="text" class="form-control"  id="resultado4">
+                </div>
+                <div class="col-md-2">
+                    <label>Suco</label>
+                    <input type="text" class="form-control"  id="resultado5">
+                </div>
+            </div>
+            <div class="col-md-6 resul">
+                <label>Resultado Final</label>
+                <input type="text" class="form-control"  id="resultadoFinal">
+            </div>
+        </div>
+    </form>
+
+ 
+	
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/hamb.js"></script>
+	<script src="js/popper.min.js"></script>
+</body>
+</html>

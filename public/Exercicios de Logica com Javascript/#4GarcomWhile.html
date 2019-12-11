@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Garçom</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>        
+          
+       //ENTRADA
+        var gorjeta;
+        var total;
+        var conta = 1;
+        var Totalfinal;
+        var Chamburguer=0;
+        var Cbatata=0;
+        var csalada=0;
+        var crefrigerante=0;
+        var csuco=0;
+        var Hamb = 0;
+        var Batata=0;
+        var Salada=0;
+        var Refrigerante = 0;
+        var Suco = 0;
+
+        //PROCESSO
+        while(conta != 6){
+        alert("____AQUI É HAMBURGUER RAIZ____"+"\n"
+              +"[1]Pão com Harmbúrguer 8,00"+"\n"
+              +"[2]Batata Frita  7,00 "+"\n"
+              +"[3]Refrigerante 7,00"+"\n"
+              +"[4]Salada 8,00"+"\n"
+              +"[5]Suco 7,00"+"\n"
+              +"[6]Deseja Finalizar?"+"\n"
+              +"________________________________");
+
+             conta = Number(prompt("Qual opção desejada?"))
+              
+
+              switch(conta){
+                  case 1:
+                    Chamburguer += 1;
+                    Hamb = Hamb + 8;
+                    break;
+                  case 2:
+                    Cbatata += 1;
+                    Batata = Batata + 7;
+                    break;
+                  case 3:
+                    crefrigerante +=1;
+                    Refrigerante += 7;
+                    break;
+                  case 4:
+                    csalada += 1;
+                    Salada = Salada + 8;
+                    break;
+                  case 5:
+                    csuco += 1;
+                    Suco = Suco + 7;
+                    break;
+                  case 6:
+                     total = Hamb+Batata+Salada+Suco
+                     break;
+              
+              }
+            }
+
+
+            //SAÍDA
+              gorjeta = total*10/100
+              Totalfinal = total+gorjeta
+
+              if(Chamburguer > 0){
+                document.write(`Hamburguer(s) qtdd = ${Chamburguer}<br>`)
+              }if(Cbatata > 0){
+                document.write(`Batata(s) qtdd = ${Cbatata}<br>`)
+              }if(crefrigerante > 0){
+                document.write(`Refrigerantes(s) qtdd = ${crefrigerante}<br>`)
+              }if(csalada > 0){
+                document.write(`Salada(s) qtdd = ${csalada}<br>`)
+              }if(csuco > 0){
+                document.write(`Suco(s) qtdd = ${Cbatata}<br>`)
+              }
+              document.write(`--------------------------------------------------<br>`)
+              document.write("Conta finalizada"+"<br>"+"Subtotal: "+total.toFixed(2)+"<br>"+"Mesa 10%: "+gorjeta.toFixed(2)+"<br>"+"Total Final: "+Totalfinal.toFixed(2))
+
+     
+        </script>
+</body>
+</html>
